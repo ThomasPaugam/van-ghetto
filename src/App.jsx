@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Achats from './components/Achats'
 import PlanVan from './components/PlanVan'
 import InfosVan from './components/InfosVan'
+import Ressources from './components/Ressources'
 import { CATEGORIES, STATUT_CYCLE } from './data/achats'
 import styles from './App.module.css'
 
@@ -9,6 +10,7 @@ const TABS = [
   { id: 'achats', label: 'Achats' },
   { id: 'plan', label: 'Plan' },
   { id: 'van', label: 'Van' },
+  { id: 'ressources', label: 'Ressources' },
 ]
 
 const STORAGE_KEY = 'van-ghetto-statuts'
@@ -99,6 +101,7 @@ export default function App() {
         )}
         {activeTab === 'plan' && <PlanVan />}
         {activeTab === 'van' && <InfosVan />}
+        {activeTab === 'ressources' && <Ressources />}
       </main>
     </div>
   )
