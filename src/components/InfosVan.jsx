@@ -4,26 +4,27 @@ const VAN_SPECS = [
   { label: 'Modèle', value: 'Renault Trafic 3' },
   { label: 'Version', value: 'L1H1 · Fourgon nu' },
   { label: 'Depuis', value: '2014' },
-  { label: 'Coffre L', value: '182 cm' },
-  { label: 'Coffre l', value: '169 cm (124 cm entre arches)' },
-  { label: 'Hauteur int.', value: '136 cm (H1)' },
-  { label: 'Diagonale', value: '~248 cm ✓' },
+  { label: 'Coffre L', value: '254 cm' },
+  { label: 'Coffre l', value: '166 cm (124 cm entre arches)' },
+  { label: 'Hauteur int.', value: '138.7 cm (H1)' },
+  { label: 'Arches de roue', value: '~25 cm de haut → plateforme 60cm passe au-dessus ✓' },
 ]
 
 const ELEC_SPECS = [
-  { label: 'Batterie', value: 'EcoFlow Delta 2', sub: '1024Wh · LiFePO4 · 3000 cycles' },
-  { label: 'Solaire', value: 'Panneau 200W rigide/pliable', sub: 'Prod. ~480Wh/j (sud FR, été)' },
-  { label: 'Frigo', value: 'Compresseur 12V · 40L', sub: '~530-600Wh/24h réel' },
-  { label: 'Autonomie', value: '~24h avec frigo + usage', sub: 'Recharge solaire quotidienne' },
+  { label: 'Batterie', value: 'EcoFlow Delta 3 Classic', sub: '1024Wh · LiFePO4 · charge 0→80% en 45min · garantie 5 ans' },
+  { label: 'Solaire', value: 'Panneau 220W dépliant EcoFlow', sub: 'Prod. ~880Wh/j (sud FR, été) · branché XT60 natif' },
+  { label: 'Frigo', value: 'Alpicool CX40 · 40L · branché AC 230V', sub: '~500Wh/24h via prise secteur Delta 3' },
+  { label: 'Sans solaire', value: '~37h d\'autonomie', sub: 'Frigo + ventilo + 2 téléphones' },
+  { label: 'Avec solaire', value: 'Autonomie illimitée', sub: '+880Wh produits − 650Wh conso = +230Wh/jour de surplus' },
 ]
 
 const TIPS = [
-  { icon: '⚡', tip: 'Panneau rigide uniquement — le flexible perd 20-30% à 75°C en été' },
-  { icon: '🌡', tip: 'Delta 2 : 0→80% en 50min sur secteur (pratique sur aires de camping) ' },
+  { icon: '⚡', tip: 'Delta 3 Classic : pas de sortie 12V DC — brancher le frigo sur la prise AC 230V' },
+  { icon: '⚡', tip: 'Delta 3 Classic : 0→80% en 45min sur secteur (pratique sur aires de camping)' },
+  { icon: '🌞', tip: 'Panneau dépliant : orienter plein sud, inclinaison 30-60° — +25% vs posé à plat' },
   { icon: '🐕', tip: 'Chien 40kg = ~1L d\'eau/heure par grosse chaleur — jerricane 20L minimum' },
   { icon: '🔧', tip: 'Découpe contreplaqué gratuite chez LM avec achat — faire un gabarit carton avant' },
-  { icon: '🌿', tip: 'Fourgon nu : cloison métallique = chien déjà isolé de l\'habitacle en roulant' },
-  { icon: '🗺', tip: 'Dans le sud : 200W suffisent. Dans le nord ou météo capricieuse : prévoir recharge secteur' },
+  { icon: '🚐', tip: 'Aménagement amovible (zéro vis dans la tôle) = reste utilitaire légalement · pas de VASP' },
 ]
 
 export default function InfosVan() {
